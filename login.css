@@ -1,0 +1,32 @@
+body {
+    background: #e9ecef;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.login {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.usuario, .contraseña {
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+    
+
+
