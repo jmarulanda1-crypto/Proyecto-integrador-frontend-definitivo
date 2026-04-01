@@ -8,13 +8,15 @@ function loguin() {
     (usuario === "Juliana" && contraseña === "123456")
         {
             window.location.href = "Main.html";}
-    else if
-        (usuario === "Monroy" && contraseña === "123456"){
-        Window.location.href = "Main.html";
-        }
+
      else if
         (usuario === "Santiago" && contraseña === "123456"){
-        Window.location.href = "Main.html";
+        window.location.href = "Main.html";
+        }
+
+    else if
+        (usuario === "Monroy" && contraseña === "123456"){
+        window.location.href = "Main.html";
         }
            
     else if (usuario === "Jose" && contraseña === "123456")

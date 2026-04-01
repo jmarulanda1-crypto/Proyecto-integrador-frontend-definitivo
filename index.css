@@ -1,91 +1,108 @@
-/* Configuración General */
-* {
+/* --- 1. FONDO Y RESET --- */
+body {
+    background-color: #ffffff; /* Fondo blanco para toda la página */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Navegación */
+/* --- 2. CONTENEDOR PRINCIPAL (NAVBAR) --- */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #502c48;
-    color: white;
-    padding: 1rem 5%;
+    background-color: #ffffff !important; /* Blanco puro */
+    border-bottom: 3px solid #483D8B;    /* Borde violeta sólido */
+    box-shadow: 0 4px 12px rgba(72, 61, 139, 0.1); /* Sombra lila suave */
+    padding: 0.8rem 1.5rem !important;
+
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
+
+
+.navbar-brand:hover {
+    transform: scale(1.03); /* Efecto de crecimiento suave */
 }
 
-.nav-links li {
-    margin-left: 20px;
+/* --- 4. ENLACES EN ESPAÑOL (Inicio, Enlace, etc.) --- */
+.nav-link {
+    color: #483D8B !important; /* Texto violeta */
+    font-weight: 600;
+    margin: 0 10px;
+    padding: 8px 15px !important;
+    transition: all 0.3s ease;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.nav-link:hover {
+    color: #362e69 !important;
+    background-color: rgba(72, 61, 139, 0.05); /* Fondo lila muy sutil */
+    border-radius: 6px;
 }
 
-/* Sección Hero (Bienvenida) */
-.hero {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                      url('https://images.unsplash.com/photo-1523050335392-93851179ae22?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+/* Estilo para el link "Inicio" activo */
+.nav-link.active {
+    background-color: rgba(72, 61, 139, 0.15) !important;
+    border-radius: 6px;
 }
 
-.hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+/* --- 5. MENÚ DESPLEGABLE (Iniciar Sesión: Estudiantes, Profesores, Directivos) --- */
+.dropdown-menu {
+    border: 2px solid #483D8B !important;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    margin-top: 12px !important;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #650854;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+.dropdown-item {
+    color: #483D8B !important; /* Texto de opciones en violeta */
+    font-weight: 500;
+    padding: 12px 25px;
+    transition: background 0.2s ease;
 }
 
-/* Tarjetas de Información */
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 5%;
-    background-color: #f4f4f4;
+.dropdown-item:hover {
+    background-color: #483D8B !important; /* Fondo violeta al seleccionar */
+    color: #ffffff !important;           /* Texto blanco al seleccionar */
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.dropdown-divider {
+    border-top: 1px solid rgba(72, 61, 139, 0.2);
+    margin: 8px 0;
 }
 
-.card h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
+/* --- 6. BUSCADOR Y BOTÓN "BUSCAR" --- */
+.form-control {
+    border: 2px solid #483D8B !important; /* Borde violeta del input */
+    border-radius: 25px !important;       /* Forma de cápsula */
+    padding-left: 20px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(72, 61, 139, 0.2) !important;
+    border-color: #483D8B !important;
+}
+
+/* Botón de Buscar sólido */
+.btn-outline-success {
+    background-color: #483D8B !important; /* Fondo violeta sólido */
+    color: #ffffff !important;           /* Texto blanco */
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 8px 25px !important;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-outline-success:hover {
+    background-color: #362e69 !important; /* Tono más oscuro */
+    box-shadow: 0 5px 15px rgba(72, 61, 139, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- 7. ADAPTACIÓN MÓVIL --- */
+.navbar-toggler {
+    border: 1px solid #483D8B !important;
+    padding: 5px;
+}
+
+.navbar-toggler-icon {
+    /* SVG personalizado para que las líneas del menú sean violetas */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(72, 61, 139, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
